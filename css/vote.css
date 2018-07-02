@@ -1,0 +1,145 @@
+/* Poll */
+
+.content-poll {
+	margin: 3% auto 3% auto;
+    max-width: 500px;
+}
+
+.poll-wrapper {
+    background-color: #fff;
+    padding: 10px;
+    max-width: 490px;
+    max-height: 1000px;
+    height: auto;
+    border-radius: 2px;
+
+    -webkit-box-shadow: 0 2px 15px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 2px 15px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 15px 1px rgba(0, 0, 0, 0.5);
+}
+
+#poll ul {
+	list-style: none;
+	padding: 2%;
+	background: #0099cc;
+    margin-bottom: 15px;
+    color: #ffffff;
+    border-left: 20px solid #333;
+}
+
+#poll ul li {
+	padding: 1%;
+}
+
+#poll ul li:hover {
+	background-color: #5a5a57;
+	transition: all 0.2s ease-out 0s;
+}
+
+#poll p {
+	padding: 0 2% 2% 0;
+}
+
+.poll-option {
+	margin-bottom: 5px;
+}
+
+.poll-radio {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	position: relative;
+	top: 4px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    transition: all 0.15s ease-out 0s;
+    background: #cbd1d8;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    outline: none;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.poll-radio:hover {
+	background: #9faab7;
+}
+
+.poll-radio:checked {
+	background: #333;
+	top: 0;
+}
+
+.poll-radio:checked::before {
+	content: '✔';
+}
+
+.poll-radio:checked::after {
+	-webkit-animation: click-wave 0.65s;
+	-moz-animation: click-wave 0.65s;
+	animation: click-wave 0.65s;
+	background: #ccc;
+	content: '';
+	display: block;
+	z-index: 100;
+}
+
+.poll-optionname {
+ 	width: 75%;
+ 	padding: 5px;
+ 	display: inline-block;
+ 	color: white;
+}
+
+.poll-votes {
+ 	width: 80px;
+ 	padding: 5px;
+ 	display: inline-block;
+ 	background-color: #333;
+ 	text-align: center;
+}
+
+.button-vote {
+	-webkit-appearance: button;
+    cursor: pointer;
+    display: inline-block;
+    border: none;
+    color: white;
+    background: #0099cc;
+    white-space: nowrap;
+    padding: 0.48rem 0.8rem !important;
+    line-height: 1.4 !important;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.button-vote:hover,
+.button-vote:focus {
+	background: #000;
+	color: white;
+	border: none;
+	transition: 0.25s;
+}
+
+@keyframes click-wave {
+    0% {
+        height: 40px;
+        width: 40px;
+        opacity: 0.35;
+        position: relative;
+    }
+    100% {
+        height: 200px;
+        width: 200px;
+        margin-left: -80px;
+        margin-top: -80px;
+        opacity: 0;
+    }
+}
